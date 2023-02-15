@@ -1,0 +1,18 @@
+﻿@using Shop.Data.Models
+
+@{
+    Layout = "_Layout";
+}
+
+<form action="" method="post">
+    <section class="login-wrapper flex-center">
+        <div class="login flex-center">
+            @{
+                foreach (Book book in Model.allBooks)
+                {
+                    @Html.Partial("AllBooks", book)
+                }
+            }
+        </div>
+    </section>
+</form>

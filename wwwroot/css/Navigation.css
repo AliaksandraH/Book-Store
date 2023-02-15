@@ -1,0 +1,59 @@
+.top-stripe {
+    width: 100%;
+    height: 50px;
+    background: #009602;
+    border-bottom: 3px #ffffff solid;
+    margin: 0;
+    padding-left: 30px;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    color: white;
+}
+
+.top-stripe p {
+    margin: 0;
+    padding: 0;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.top-stripe h2 {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.top_stripe_pa {
+    width: 294px;
+    background: #009602;
+    position: absolute;
+    border: 3px white solid;
+    left: 175px;
+    padding: 10px;
+    flex-direction: column;
+    display: none;
+}
+
+.button_pa button {
+    padding: 5px;
+    margin: 6px;
+    background: white;
+    border-radius: 5px;
+    border: none;
+}
+
+.button_pa a {
+    color: #009602;
+}
+
+.personal_account:hover {
+    cursor: pointer;
+    color: #51de7e;
+}
+
+.logout {
+    color: red !important;
+}

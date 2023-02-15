@@ -1,0 +1,60 @@
+﻿@model Book
+@{
+    Layout = "_Layout";
+}
+<form asp-action="AddBook" method="post">
+    <section class="order-wrapper order-flex-center">
+        <div class="order order-flex-center">
+            <div class="order-registration__body order__body-register order-flex-center">
+                <div class="order-input">
+                    <label asp-for="name"></label>
+                    <input asp-for="name" />
+                    <span asp-validation-for="name"></span>
+                </div>
+                <div class="order-input">
+                    <label asp-for="author"></label>
+                    <input asp-for="author" />
+                    <span asp-validation-for="author"></span>
+                </div>
+                <div class="order-input">
+                    <label asp-for="releaseDate"></label>
+                    <input asp-for="releaseDate" />
+                    <span asp-validation-for="releaseDate"></span>
+                </div>
+                <div class="order-input">
+                    <label asp-for="desc"></label>
+                    <input asp-for="desc" />
+                    <span asp-validation-for="desc"></span>
+                </div>
+                <div class="order-input">
+                    <label asp-for="img"></label>
+                    <input asp-for="img" />
+                    <span asp-validation-for="img"></span>
+                </div>
+                <div class="order-input">
+                    <label asp-for="price"></label>
+                    <input asp-for="price" />
+                    <span asp-validation-for="price"></span>
+                </div>
+                <div class="order-input">
+                    <label asp-for="categoryID"></label>
+                    <select asp-for="categoryID">
+                        <option value="1">Biografie</option>
+                        <option value="2">Dla dzieci</option>
+                        <option value="3">Historia</option>
+                        <option value="4">Komiks</option>
+                        <option value="5">Kryminał, sensacja, thriller</option>
+                        <option value="6">Kuchnia i diety</option>
+                        <option value="7">Literatura obyczajowa</option>
+                        <option value="8">Literatura piękna obca</option>
+                        <option value="9">Literatura piękna polska</option>
+                    </select>
+                    <span asp-validation-for="price"></span>
+                </div>
+                <div class="order-buttons">
+                    <input type="submit" value="Ok" />
+                </div>
+            </div>
+        </div>
+    </section>
+</form>

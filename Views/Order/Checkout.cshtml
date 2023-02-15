@@ -1,0 +1,40 @@
+﻿@model Order
+@{
+    Layout = "_Layout";
+}
+    <form asp-action="Checkout" method="post">
+        <section class="order-wrapper order-flex-center">
+            <div class="order order-flex-center">
+                <div class="order-registration__body order__body-register order-flex-center">
+                    <div class="order-input">
+                        <label asp-for="name"></label>
+                        <input asp-for="name" />
+                        <span asp-validation-for="name"></span>
+                    </div>
+                    <div class="order-input">
+                        <label asp-for="surname"></label>
+                        <input asp-for="surname" />
+                        <span asp-validation-for="surname"></span>
+                    </div>
+                    <div class="order-input">
+                        <label asp-for="adress"></label>
+                        <input asp-for="adress" />
+                        <span asp-validation-for="adress"></span>
+                    </div>
+                    <div class="order-input">
+                        <label asp-for="phone"></label>
+                        <input asp-for="phone" />
+                        <span asp-validation-for="phone"></span>
+                    </div>
+                    <div class="order-input">
+                        <label asp-for="email"></label>
+                        <input asp-for="email" />
+                        <span asp-validation-for="email"></span>
+                    </div>
+                    <div class="order-buttons">
+                        <input type="submit" value="Ok" />
+                    </div>
+                </div>
+            </div>
+        </section>
+    </form>

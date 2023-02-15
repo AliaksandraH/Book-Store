@@ -1,0 +1,33 @@
+﻿@model ShopCartViewModel
+
+@{
+    Layout = "_Layout";
+}
+
+<form action="" method="post">
+    <section class="login-wrapper flex-center">
+        <div class="login flex-cart">
+            @foreach (var el in Model.shopCart.listShopItems)
+            {
+                <div class="cart">
+                    <img src=@el.book.img class="img_book">
+                    <div class="data_book">
+                        <p>Tytuł książ: <span>@el.book.name</span></p>
+                    </div>
+                    <div class="data_book">
+                        <p>Autor: <span>@el.book.author</span></p>
+                    </div>
+                    <div class="data_book">
+                        <p>Cena książki: <span>@el.book.price.ToString("c")</span></p>
+                    </div>
+                </div>
+            }          
+        </div>      
+    </section>
+</form>
+<div class="button-cart-left">
+    <div class="button-cart">
+        <a asp-controller="Order" asp-action="Checkout">Płacić</a>
+    </div>
+</div>
+

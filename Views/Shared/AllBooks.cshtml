@@ -1,0 +1,25 @@
+﻿@model Shop.Data.Models.Book
+
+<div class="login__body">
+    <div class="img">
+        <img src=@Model.img class="img_book">
+    </div>
+    <div class="data">
+        <div class="title_book">
+            <p>@Model.name</p>
+        </div>
+        <div class="data_book">
+            <p>Autor: <span>@Model.author</span></p>
+        </div>
+        <div class="data_book">
+            <p>Cena książki: <span>@Model.price.ToString("c")</span></p>
+        </div>
+        <div class="data_book">
+            <p class="desc">Opis</p>
+            <span>@Model.desc</span>
+        </div>
+        <div class="button_buy">
+            <button><a asp-controller="ShopCart" asp-action="addToCart" asp-route-id="@Model.id">Kupić</a></button>
+        </div>
+    </div>
+</div>
